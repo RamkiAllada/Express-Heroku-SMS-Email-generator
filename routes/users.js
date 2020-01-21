@@ -65,12 +65,12 @@ router.get('/', function (req, res, next) {
     TILL_PATH += "?"+TILL_URL.query;
   }
   
-  requestJSON.createClient(TILL_BASE).post(TILL_PATH, {
-    "phone": ["917981538326"],
-    "text": "Hello Prashanth!!!! Congratulations... for the shout out on the work done and you are rewarded for your work :)"
-  }, function(err, ress, body) {
-    return console.log(ress.statusCode);
-  });
+  // requestJSON.createClient(TILL_BASE).post(TILL_PATH, {
+  //   "phone": ["********"],
+  //   "text": "Hello Heroku!"
+  // }, function(err, ress, body) {
+  //   return console.log(ress.statusCode);
+  // });
   res.send('respond with a resource');
 });
 
