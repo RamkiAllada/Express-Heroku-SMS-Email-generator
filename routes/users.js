@@ -48,14 +48,14 @@ router.get('/', function (req, res, next) {
     });
 
   //With callback
-  sg.API(request, function (error, response) {
-    if (error) {
-      console.log('Error response received');
-    }
-    console.log(response.statusCode);
-    console.log(response.body);
-    console.log(response.headers);
-  });
+  // sg.API(request, function (error, response) {
+  //   if (error) {
+  //     console.log('Error response received');
+  //   }
+  //   console.log(response.statusCode);
+  //   console.log(response.body);
+  //   console.log(response.headers);
+  // });
   
   var TILL_URL = url.parse(process.env.TILL_URL);
   var TILL_BASE = TILL_URL.protocol + "//" + TILL_URL.host;
@@ -65,12 +65,12 @@ router.get('/', function (req, res, next) {
     TILL_PATH += "?"+TILL_URL.query;
   }
   
-  // requestJSON.createClient(TILL_BASE).post(TILL_PATH, {
-  //   "phone": ["********"],
-  //   "text": "Hello Heroku!"
-  // }, function(err, ress, body) {
-  //   return console.log(ress.statusCode);
-  // });
+  requestJSON.createClient(TILL_BASE).post(TILL_PATH, {
+    "phone": ["9492526302"],
+    "text": "Hello Heroku!"
+  }, function(err, ress, body) {
+    return console.log(ress.statusCode);
+  });
   res.send('respond with a resource');
 });
 
