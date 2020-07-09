@@ -34,9 +34,11 @@ var request = sg.emptyRequest({
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
+  console.log('in to the rigger email');
   //With promise
   sg.API(request)
     .then(response => {
+      console.log('in to response');
       console.log(response.statusCode);
       console.log(response.body);
       console.log(response.headers);
