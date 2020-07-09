@@ -14,7 +14,7 @@ var request = sg.emptyRequest({
       {
         to: [
           {
-            email: 'alladaramki@gmail.com',
+            email: 'tempram@mailinator.com',
           },
         ],
         subject: 'Hello World from the SendGrid Node.js Library!',
