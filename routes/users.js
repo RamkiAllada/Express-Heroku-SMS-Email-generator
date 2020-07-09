@@ -6,36 +6,36 @@ var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 var requestJSON = require("request-json");
 var url = require("url");
 
-var request = sg.emptyRequest({
-  method: 'POST',
-  path: '/v3/mail/send',
-  body: {
-    personalizations: [
-      {
-        to: [
-          {
-            email: 'tempram@mailinator.com',
-          },
-        ],
-        subject: 'Hello World from the SendGrid Node.js Library!',
-      },
-    ],
-    from: {
-      email: 'app159386653@heroku.com',
-    },
-    content: [
-      {
-        type: 'text/plain',
-        value: 'Hello, Email!',
-      },
-    ],
-  },
-});
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   console.log('in to the rigger email');
   //With promise
+  var request = sg.emptyRequest({
+    method: 'POST',
+    path: '/v3/mail/send',
+    body: {
+      personalizations: [
+        {
+          to: [
+            {
+              email: 'rkeswani@deloitte.com',
+            },
+          ],
+          subject: 'Hello World from the SendGrid Node.js Library!',
+        },
+      ],
+      from: {
+        email: 'app159386653@heroku.com',
+      },
+      content: [
+        {
+          type: 'text/plain',
+          value: 'Hello, Email!',
+        },
+      ],
+    },
+  });
   sg.API(request)
     .then(response => {
       console.log('in to response');
@@ -69,7 +69,7 @@ router.get('/', function (req, res, next) {
   }
   
   requestJSON.createClient(TILL_BASE).post(TILL_PATH, {
-    "phone": ["9492526302"],
+    "phone": ["+919492526302"],
     "text": "Hello Heroku!"
   }, function(err, ress, body) {
     return console.log(ress.statusCode);
