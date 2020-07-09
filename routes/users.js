@@ -50,15 +50,15 @@ router.get('/', function (req, res, next) {
       console.log('in to error 22222');
     });
 
-  // With callback
-  sg.API(request, function (error, response) {
-    if (error) {
-      console.log('Error response received');
-    }
-    console.log(response.statusCode);
-    console.log(response.body);
-    console.log(response.headers);
-  });
+  // // With callback
+  // sg.API(request, function (error, response) {
+  //   if (error) {
+  //     console.log('Error response received');
+  //   }
+  //   console.log(response.statusCode);
+  //   console.log(response.body);
+  //   console.log(response.headers);
+  // });
   
   var TILL_URL = url.parse(process.env.TILL_URL);
   var TILL_BASE = TILL_URL.protocol + "//" + TILL_URL.host;
