@@ -47,17 +47,18 @@ router.get('/', function (req, res, next) {
       //error is an instance of SendGridError
       //The full response is attached to error.response
       console.log(error.response.statusCode);
+      console.log('in to error 22222');
     });
 
-  //With callback
-  // sg.API(request, function (error, response) {
-  //   if (error) {
-  //     console.log('Error response received');
-  //   }
-  //   console.log(response.statusCode);
-  //   console.log(response.body);
-  //   console.log(response.headers);
-  // });
+  // With callback
+  sg.API(request, function (error, response) {
+    if (error) {
+      console.log('Error response received');
+    }
+    console.log(response.statusCode);
+    console.log(response.body);
+    console.log(response.headers);
+  });
   
   var TILL_URL = url.parse(process.env.TILL_URL);
   var TILL_BASE = TILL_URL.protocol + "//" + TILL_URL.host;
