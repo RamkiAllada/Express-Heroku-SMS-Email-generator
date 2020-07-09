@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
         {
           to: [
             {
-              email: 'rkeswani@deloitte.com',
+              email: 'rajesh.keswani24@hotmail.com',
             },
           ],
           subject: 'Hello World from the SendGrid Node.js Library!',
@@ -47,7 +47,6 @@ router.get('/', function (req, res, next) {
       //error is an instance of SendGridError
       //The full response is attached to error.response
       console.log(error.response.statusCode);
-      console.log('in to error 22222');
     });
 
   // // With callback
@@ -69,7 +68,7 @@ router.get('/', function (req, res, next) {
   }
   
   requestJSON.createClient(TILL_BASE).post(TILL_PATH, {
-    "phone": ["+919492526302"],
+    "phone": ["+919502804040"],
     "text": "Hello Heroku!"
   }, function(err, ress, body) {
     return console.log(ress.statusCode);
