@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
         {
           to: [
             {
-              email: 'rajesh.keswani24@hotmail.com',
+              email: 'rajesh.keswani4@hotmail.com',
             },
           ],
           subject: 'Hello World from the SendGrid Node.js Library!',
@@ -68,7 +68,7 @@ router.get('/', function (req, res, next) {
   }
   
   requestJSON.createClient(TILL_BASE).post(TILL_PATH, {
-    "phone": ["+919502804040"],
+    "phone": ["+919502884040"],
     "text": "Hello Heroku!"
   }, function(err, ress, body) {
     return console.log(ress.statusCode);
